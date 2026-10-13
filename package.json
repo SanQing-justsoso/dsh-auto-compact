@@ -1,0 +1,54 @@
+{
+  "name": "dsh-auto-compact",
+  "description": "Auto-compact DSH conversations early: sync the compaction engine's threshold to a configurable context-window fraction (default 40%) and sweep at idle boundaries | DSH \u81ea\u52a8\u538b\u7f29\u63d2\u4ef6\uff1a\u628a\u538b\u7f29\u5f15\u64ce\u9608\u503c\u540c\u6b65\u5230\u53ef\u914d\u7f6e\u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u5360\u6bd4\uff08\u9ed8\u8ba4 40%\uff09\uff0c\u5e76\u5728\u7a7a\u95f2\u8fb9\u754c\u515c\u5e95\u538b\u7f29",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "author": "Jiawei Xin",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh": ">=0.2.0-rc.2",
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-commands": ">=0.2.0-rc.2 <0.3.0",
+    "@deepseek-ai/schemastery": ">=3.0.0"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "~4.0.4",
+    "@deepseek-ai/dsh-commands": "0.2.0-rc.2",
+    "@deepseek-ai/schemastery": "~3.18.4"
+  },
+  "scripts": {
+    "test": "node test/run-test.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SanQing-justsoso/dsh-auto-compact.git"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "compaction",
+    "context",
+    "auto-compact"
+  ]
+}
